@@ -1,0 +1,6 @@
+/vendor/
+access.log
+www.pid
+.php-version
+config.php
+/twig_cache/**/*.php
