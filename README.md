@@ -5,7 +5,9 @@ ReactPHP Post parameter support sample
 
 \\Uzulla\\React\\* is post parameter support sample.
 
-> code from ReactPHP 0.4.0
+> code base ReactPHP 0.4.0
+
+`Transfer-Encoding: chunked` not supported.
 
 usage
 =====
