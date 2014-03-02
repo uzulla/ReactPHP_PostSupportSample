@@ -9,6 +9,17 @@ ReactPHP Post parameter support sample
 
 `Transfer-Encoding: chunked` not supported.
 
+sample setup and run
+==============
+
+```
+$ composer install
+$ php ./boot.php
+(or hhvm ./boot.php)
+```
+
+_require php>=5.4_
+
 usage
 =====
 
@@ -18,16 +29,16 @@ see `/boot.php`
 
 ```
 // build reactor
-$loop = React\EventLoop\Factory::create();
-$socket = new React\Socket\Server($loop);
-$http = new \Uzulla\React\Http\Server($socket);
+$loop = React¥EventLoop¥Factory::create();
+$socket = new React¥Socket¥Server($loop);
+$http = new ¥Uzulla¥React¥Http¥Server($socket);
 $http->on('request', $app);
 ```
 
 ## get params.
 
 ```
-$app = function (\Uzulla\React\Http\Request $req,\React\Http\Response $res) {
+$app = function (¥Uzulla¥React¥Http¥Request $req,¥React¥Http¥Response $res) {
     $query = $req->getQuery(); // get params (already existent)
     $params = $req->getParams(); // post params (new add)
     //...
